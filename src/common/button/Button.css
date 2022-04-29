@@ -1,0 +1,11 @@
+.Button-features{
+    height: 32px;
+    width: 274px;
+    background-color: #238636;
+    color: #f0f6fc;
+    padding: 5px, 15px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    font-size: 14px;
+}

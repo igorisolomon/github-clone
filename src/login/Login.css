@@ -1,12 +1,21 @@
-.login-container {
-    /* color: #ffffff;
+.Login-container {
     height: 100vh;
-    width: 100vw;
-    background-color: #000000; */
+    width: 300px;
+    color: #c9d1d9;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.login-container img{
+.Login-container h1{
+    font-weight: 300;
+}
+
+.Login-container img{
     height: 48px;
     width: 48px;
-    filter: invert(100%)
+    filter: invert(100%);
+    display: block;
 }
