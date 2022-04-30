@@ -1,0 +1,53 @@
+.Sidebar-profile-pic img {
+  border-radius: 50%;
+  margin-top: -20px;
+}
+
+.Sidebar-profile-name h1 {
+  font-size: 24px;
+  color: #c9d1d9;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.Sidebar-profile-name h3 {
+  font-size: 20px;
+  color: #8b949e;
+  height: 24px;
+  margin: -10px auto 20px;
+  font-weight: 300;
+}
+
+.follow,
+.location {
+  color: #8b949e;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.follow span,
+.location span {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.Sidebar-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.achievements img {
+  height: 67px;
+  width: 64px;
+}
+.highlights span {
+  border: #a371f7 1px solid;
+}
+.org img{
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    margin-right: 5px;
+}

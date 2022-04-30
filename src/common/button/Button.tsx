@@ -5,12 +5,13 @@ import "./Button.css";
 
 export interface ButtonProps {
   title: string;
+  bgColor: string;
 }
 
 export const Bttn = (props: ButtonProps) => {
   return (
     <>
-      <button className="Button-features">{props.title}</button>
+      <button className="Button-features" style={{backgroundColor:props.bgColor}}>{props.title}</button>
     </>
   );
 };

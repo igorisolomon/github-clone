@@ -10,7 +10,7 @@ const Login = () => {
       <div className="Login-container">
         <img src={logo} alt="logo" />
         <h1>Sign into GitHub</h1>
-        <Bttn title="Signin with GitHub" />
+        <Bttn title="Signin with GitHub" bgColor='#238636' />
       </div>
     </div>
   )

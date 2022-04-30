@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Tab, Tabs } from "@mui/material";
+import { Badge, Box, Tab, Tabs } from "@mui/material";
 import {
   ThemeProvider,
   createTheme,
@@ -10,7 +10,7 @@ import ClassOutlinedIcon from "@mui/icons-material/ClassOutlined";
 import BorderAllOutlinedIcon from "@mui/icons-material/BorderAllOutlined";
 import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
-import './SecNav.css'
+import "./SecNav.css";
 
 interface LinkTabProps {
   label?: string;
@@ -58,7 +58,7 @@ const finalTheme = createTheme({
 });
 
 const SecNav = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -66,48 +66,46 @@ const SecNav = () => {
 
   return (
     <ThemeProvider theme={finalTheme}>
-      <div className="row SecNav-tab">
+      <div className="container">
+        <div className="row SecNav-tab">
           <div className="col-lg-3"></div>
           <div className="col-lg-9">
-          <Box className="SecNav-tab">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="nav tabs"
-        >
-          <Tab
-            icon={<MenuBookIcon />}
-            iconPosition="start"
-            label="Overview"
-            href="/drafts"
-          />
-          <Tab
-            icon={<ClassOutlinedIcon />}
-            iconPosition="start"
-            label="Repositories"
-            href="/trash"
-          />
-          <Tab
-            icon={<BorderAllOutlinedIcon />}
-            iconPosition="start"
-            label="Projects"
-            href="/spam"
-          />
-          <Tab
-            icon={<ViewInArOutlinedIcon />}
-            iconPosition="start"
-            label="Packages"
-            href="/trash"
-          />
-          <Tab
-            icon={<StarBorderOutlinedIcon />}
-            iconPosition="start"
-            label="Stars"
-            href="/spam"
-          />
-        </Tabs>
-      </Box>
+            <Box className="SecNav-tab">
+              <Tabs value={value} onChange={handleChange} aria-label="nav tabs">
+                <Tab
+                  icon={<MenuBookIcon />}
+                  iconPosition="start"
+                  label={<>Overview &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
+                  href="/drafts"
+                />
+                <Tab
+                  icon={<ClassOutlinedIcon />}
+                  iconPosition="start"
+                  label={<>Repositories &nbsp; <span className="badge  bg-secondary rounded-pill">{21}</span></>}
+                  href="/trash"
+                />
+                <Tab
+                  icon={<BorderAllOutlinedIcon />}
+                  iconPosition="start"
+                  label={<>Projects &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
+                  href="/spam"
+                />
+                <Tab
+                  icon={<ViewInArOutlinedIcon />}
+                  iconPosition="start"
+                  label={<>Packages &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
+                  href="/trash"
+                />
+                <Tab
+                  icon={<StarBorderOutlinedIcon />}
+                  iconPosition="start"
+                  label={<>Stars &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
+                  href="/spam"
+                />
+              </Tabs>
+            </Box>
           </div>
+        </div>
       </div>
     </ThemeProvider>
   );
