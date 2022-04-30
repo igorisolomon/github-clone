@@ -12,24 +12,21 @@ import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import "./SecNav.css";
 
-interface LinkTabProps {
-  label?: string;
-  href?: string;
-}
-
-function LinkTab(props: LinkTabProps) {
-  return (
-    <Tab
-      component="a"
-      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
-  );
-}
-
 const finalTheme = createTheme({
+  typography: {
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
   components: {
     MuiTabs: {
       styleOverrides: {
@@ -41,17 +38,18 @@ const finalTheme = createTheme({
     MuiTab: {
       styleOverrides: {
         root: sx({
-          color: "#ffffff",
+          color: "#c9d1d9",
           fontSize: 14,
-          fontWeight: "400",
+          fontWeight: "500",
+          textTransform: "none",
           "&:hover": {
             color: "#ffffff",
             borderBottom: "#c9d1d9 1px solid",
           },
+          "&.Mui-selected": {
+            color: "#ffffff",
+          },
         }),
-        selected: {
-          color: "#ffffff",
-        },
       },
     },
   },
@@ -75,32 +73,62 @@ const SecNav = () => {
                 <Tab
                   icon={<MenuBookIcon />}
                   iconPosition="start"
-                  label={<>Overview &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
-                  href="/drafts"
+                  label={
+                    <>
+                      Overview &nbsp;{" "}
+                      <span className="badge  bg-secondary rounded-pill">
+                        {}
+                      </span>
+                    </>
+                  }
                 />
                 <Tab
                   icon={<ClassOutlinedIcon />}
                   iconPosition="start"
-                  label={<>Repositories &nbsp; <span className="badge  bg-secondary rounded-pill">{21}</span></>}
-                  href="/trash"
+                  label={
+                    <>
+                      Repositories &nbsp;{" "}
+                      <span className="badge  bg-secondary rounded-pill">
+                        {21}
+                      </span>
+                    </>
+                  }
                 />
                 <Tab
                   icon={<BorderAllOutlinedIcon />}
                   iconPosition="start"
-                  label={<>Projects &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
-                  href="/spam"
+                  label={
+                    <>
+                      Projects &nbsp;{" "}
+                      <span className="badge  bg-secondary rounded-pill">
+                        {}
+                      </span>
+                    </>
+                  }
                 />
                 <Tab
                   icon={<ViewInArOutlinedIcon />}
                   iconPosition="start"
-                  label={<>Packages &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
-                  href="/trash"
+                  label={
+                    <>
+                      Packages &nbsp;{" "}
+                      <span className="badge  bg-secondary rounded-pill">
+                        {}
+                      </span>
+                    </>
+                  }
                 />
                 <Tab
                   icon={<StarBorderOutlinedIcon />}
                   iconPosition="start"
-                  label={<>Stars &nbsp; <span className="badge  bg-secondary rounded-pill">{}</span></>}
-                  href="/spam"
+                  label={
+                    <>
+                      Stars &nbsp;{" "}
+                      <span className="badge  bg-secondary rounded-pill">
+                        {}
+                      </span>
+                    </>
+                  }
                 />
               </Tabs>
             </Box>
