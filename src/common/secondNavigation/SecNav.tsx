@@ -11,6 +11,7 @@ import BorderAllOutlinedIcon from "@mui/icons-material/BorderAllOutlined";
 import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import "./SecNav.css";
+import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 
 const finalTheme = createTheme({
   typography: {
@@ -55,6 +56,27 @@ const finalTheme = createTheme({
   },
 });
 
+
+interface LinkTabProps {
+  href?: string;
+  label?: ReactJSXElement;
+  icon?:ReactJSXElement;
+  iconPosition?:"bottom"|"top"|"end"|"start";
+}
+
+function LinkTab(props: LinkTabProps) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
+}
+
+
 const SecNav = () => {
   const [value, setValue] = React.useState(1);
 
@@ -70,7 +92,7 @@ const SecNav = () => {
           <div className="col-lg-9">
             <Box className="SecNav-tab">
               <Tabs value={value} onChange={handleChange} aria-label="nav tabs">
-                <Tab
+                <LinkTab
                   icon={<MenuBookIcon />}
                   iconPosition="start"
                   label={
@@ -82,8 +104,8 @@ const SecNav = () => {
                     </>
                   }
                 />
-                <Tab
-                  icon={<ClassOutlinedIcon />}
+                <LinkTab
+                  // icon={<ClassOutlinedIcon />}
                   iconPosition="start"
                   label={
                     <>
@@ -94,7 +116,7 @@ const SecNav = () => {
                     </>
                   }
                 />
-                <Tab
+                <LinkTab
                   icon={<BorderAllOutlinedIcon />}
                   iconPosition="start"
                   label={
@@ -106,7 +128,7 @@ const SecNav = () => {
                     </>
                   }
                 />
-                <Tab
+                <LinkTab
                   icon={<ViewInArOutlinedIcon />}
                   iconPosition="start"
                   label={
@@ -118,7 +140,7 @@ const SecNav = () => {
                     </>
                   }
                 />
-                <Tab
+                <LinkTab
                   icon={<StarBorderOutlinedIcon />}
                   iconPosition="start"
                   label={

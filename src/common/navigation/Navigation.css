@@ -6,12 +6,21 @@
     height: 72px;
 }
 
-.Nav-container img{
+.Nav-container a img{
     width: 32px;
     height: 32px;
     filter: invert(100%);
 }
 
 .Nav-icon svg{
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.Nav-icon img{
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
     margin-left: 10px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navigation.css";
 import logo from "../../assets/img/logo.svg";
+import profilePix from "../../assets/img/imgPlaceholder.jpeg"
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
@@ -55,7 +56,7 @@ const Navigation = () => {
               <div className="Nav-icon">
                   <NotificationsOutlinedIcon />
                   <AddOutlinedIcon />
-                  <AccountCircleOutlinedIcon />
+                  <img src={profilePix} alt="" />
               </div>
           </div>
         </div>
