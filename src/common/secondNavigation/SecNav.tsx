@@ -10,6 +10,7 @@ import ClassOutlinedIcon from "@mui/icons-material/ClassOutlined";
 import BorderAllOutlinedIcon from "@mui/icons-material/BorderAllOutlined";
 import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import './SecNav.css'
 
 interface LinkTabProps {
   label?: string;
@@ -43,15 +44,9 @@ const finalTheme = createTheme({
           color: "#ffffff",
           fontSize: 14,
           fontWeight: "400",
-          height: 48,
-          paddingTop:0,
-          paddingBottom: 0,
           "&:hover": {
             color: "#ffffff",
             borderBottom: "#c9d1d9 1px solid",
-          },
-          "&selected": {
-            color: "#ffffff",
           },
         }),
         selected: {
@@ -78,8 +73,7 @@ const SecNav = () => {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="nav tabs example"
-          className="SecNav-tab"
+          aria-label="nav tabs"
         >
           <Tab
             icon={<MenuBookIcon />}

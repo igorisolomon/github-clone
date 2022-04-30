@@ -11,3 +11,7 @@
     height: 32px;
     filter: invert(100%);
 }
+
+.Nav-icon svg{
+    margin-left: 10px;
+}
